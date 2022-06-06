@@ -85,6 +85,7 @@ iteratees
 josephg
 jsdelivr
 keyv
+keyvadapter
 keyvaluecache
 KHTML
 Kubernetes

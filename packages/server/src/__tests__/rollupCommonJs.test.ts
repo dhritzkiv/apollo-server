@@ -12,7 +12,7 @@ describe('@rollup/plugin-commonjs', () => {
       sourcemapExcludeSources: false,
     };
     const bundle = await rollup.rollup({
-      input: path.resolve(__dirname, '..', '..', 'dist', 'index.js'),
+      input: path.resolve(__dirname, '..', '..', 'dist', 'cjs', 'index.js'),
       plugins: [json(), commonjs()],
       onwarn: () => {
         /* suppress warnings */
@@ -25,3 +25,6 @@ describe('@rollup/plugin-commonjs', () => {
     expect(varDefinedAfterBundle).toEqual('foo');
   });
 });
+
+// FIXME consider using rollup to prove that express is only pulled in by
+// standalone.
